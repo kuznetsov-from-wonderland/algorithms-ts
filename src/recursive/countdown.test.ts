@@ -1,9 +1,9 @@
-import { countdownIterative, countdownRecursive } from "./countdown";
+import { countdownIterative, countdownRecursive } from './countdown'
 
-test("should countdown", () => {
-  countdownIterative(5);
-});
+test('should countdown', () => {
+  countdownIterative(5)
+})
 
-test("should countdown", () => {
-  countdownRecursive(5);
-});
+test('should countdown', () => {
+  countdownRecursive(5)
+})
