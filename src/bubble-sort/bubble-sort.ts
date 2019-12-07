@@ -14,4 +14,22 @@ const bubbleSort = <T>(arr: T[]): T[] => {
   return shallowCopy
 }
 
-export { swap, bubbleSort }
+const bubbleSortFastest = <T>(arr: T[]): T[] => {
+  const shallowCopy = [...arr]
+  let hasMadeAtLeastOneSwap: boolean
+  for (let i = shallowCopy.length; i > 0; i--) {
+    hasMadeAtLeastOneSwap = false
+    for (let j = 0; j < i - 1; j++) {
+      if (shallowCopy[j] > shallowCopy[j + 1]) {
+        swap(shallowCopy, j, j + 1)
+        hasMadeAtLeastOneSwap = true
+      }
+    }
+    if (!hasMadeAtLeastOneSwap) {
+      break
+    }
+  }
+  return shallowCopy
+}
+
+export { swap, bubbleSort, bubbleSortFastest }

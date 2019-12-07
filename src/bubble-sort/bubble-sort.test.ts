@@ -1,4 +1,4 @@
-import { swap, bubbleSort } from './bubble-sort'
+import { swap, bubbleSort, bubbleSortFastest } from './bubble-sort'
 
 describe('swap ES6', () => {
   test('should swap array elements', () => {
@@ -9,6 +9,18 @@ describe('swap ES6', () => {
   test('bubblesort', () => {
     const arr = [1, 5, 16, 20, 2, 0, -1, -100, 19, 19]
     const sortedArr = bubbleSort(arr)
+    expect(sortedArr.length).toEqual(arr.length)
+    expect(sortedArr).toEqual([-100, -1, 0, 1, 2, 5, 16, 19, 19, 20])
+  })
+  test('bubbleSortFastest', () => {
+    const arr = [1, 5, 16, 20, 2, 0, -1, -100, 19, 19]
+    const sortedArr = bubbleSortFastest(arr)
+    expect(sortedArr.length).toEqual(arr.length)
+    expect(sortedArr).toEqual([-100, -1, 0, 1, 2, 5, 16, 19, 19, 20])
+  })
+  test('bubbleSortFastest', () => {
+    const arr = [-100, -1, 0, 1, 2, 5, 16, 19, 19, 20]
+    const sortedArr = bubbleSortFastest(arr)
     expect(sortedArr.length).toEqual(arr.length)
     expect(sortedArr).toEqual([-100, -1, 0, 1, 2, 5, 16, 19, 19, 20])
   })
